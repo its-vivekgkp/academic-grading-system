@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.grade-calculator-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 50%, #e0e7ff 100%);
+  padding: 16px;
+}
+
+.max-width-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header-container {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sparkles-icon {
+  width: 32px;
+  height: 32px;
+  color: #4f46e5;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #4f46e5, #9333ea, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #475569;
+  max-width: 672px;
+  margin: 0 auto 24px;
+}
+
+.how-to-calculate-button {
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  margin-bottom: 24px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.how-to-calculate-button:hover {
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.how-to-calculate-card {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.how-to-calculate-header {
+  background: linear-gradient(to right, #e0e7ff, #f3e8ff);
+  padding: 16px;
+}
+
+.how-to-calculate-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.how-to-calculate-content {
+  text-align: left;
+  color: #334155;
+  padding: 24px;
+}
+
+.calculation-example {
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.example-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+
+.example-text {
+  margin-bottom: 8px;
+}
+
+.example-detail {
+  font-size: 0.875rem;
+}
+
+.grade-scale-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .grade-scale-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grade-scale-item,
+.grade-scale-item-wide {
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.grade-scale-item-wide {
+  grid-column: span 2;
+}
+
+.calculator-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1024px) {
+  .calculator-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sgpa-section,
+.cgpa-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sgpa-card,
+.cgpa-card {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sgpa-header {
+  background: linear-gradient(to right, #eff6ff, #e0e7ff);
+  padding: 16px;
+}
+
+.cgpa-header {
+  background: linear-gradient(to right, #f5f3ff, #fae8ff);
+  padding: 16px;
+}
+
+.sgpa-title,
+.cgpa-title {
+  font-size: 1.25rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.calculator-icon {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.graduation-icon {
+  width: 24px;
+  height: 24px;
+  color: #7e22ce;
+}
+
+.sgpa-content,
+.cgpa-content {
+  padding: 24px;
+}
+
+.subject-card,
+.semester-card {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: rgba(248, 250, 252, 0.8);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.subject-grid,
+.semester-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+  align-items: end;
+}
+
+@media (min-width: 768px) {
+  .subject-grid,
+  .semester-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.subject-label,
+.semester-label,
+.marks-label,
+.credits-label,
+.sgpa-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.subject-number,
+.semester-number {
+  font-size: 0.875rem;
+  color: #64748b;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.marks-input,
+.credits-input,
+.sgpa-input {
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  transition: all 0.2s;
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.marks-input:focus,
+.credits-input:focus,
+.sgpa-input:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.subject-buttons,
+.semester-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.remove-button {
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  background: transparent;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.remove-button:hover {
+  background-color: #fee2e2;
+  border-color: #f87171;
+  transform: scale(1.1);
+}
+
+.add-button {
+  border: 1px solid #86efac;
+  color: #16a34a;
+  background: transparent;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.add-button:hover {
+  background-color: #dcfce7;
+  border-color: #4ade80;
+  transform: scale(1.1);
+}
+
+.minus-icon,
+.plus-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.grade-info {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: #64748b;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.grade-letter {
+  font-weight: 700;
+  color: #b45309;
+}
+
+.grade-point {
+  font-weight: 700;
+  color: #047857;
+}
+
+.sgpa-result-card,
+.cgpa-result-card {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sgpa-result-header {
+  background: linear-gradient(to right, #eff6ff, #bae6fd);
+  padding: 16px;
+}
+
+.cgpa-result-header {
+  background: linear-gradient(to right, #f5f3ff, #ddd6fe);
+  padding: 16px;
+}
+
+.sgpa-result-title,
+.cgpa-result-title {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.sgpa-result-content,
+.cgpa-result-content {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sgpa-result-display {
+  background: linear-gradient(to bottom right, #dbeafe, #bae6fd);
+}
+
+.cgpa-result-display {
+  background: linear-gradient(to bottom right, #ede9fe, #ddd6fe);
+}
+
+.sgpa-result-display,
+.cgpa-result-display {
+  text-align: center;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+  width: 100%;
+}
+
+.sgpa-value,
+.cgpa-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  animation: pulse 2s infinite;
+}
+
+.sgpa-value {
+  color: #1d4ed8;
+}
+
+.cgpa-value {
+  color: #6d28d9;
+}
+
+.sgpa-label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #3b82f6;
+}
+
+.cgpa-label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #7c3aed;
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .subject-grid,
+  .semester-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .subject-buttons,
+  .semester-buttons {
+    justify-content: flex-end;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

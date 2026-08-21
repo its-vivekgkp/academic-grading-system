@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 50%, #e0e7ff 100%);
+}
+
+.header-section {
+  padding-top: 3rem;
+  padding-bottom: 0;
+}
+
+.header-content {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #4f46e5, #9333ea, #2563eb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2rem; /* Increased gap */
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-top: 0; /* Reset any top margin */
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: start;
+}
+
+.card-section {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.card-container {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Toggle */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.toggle-grading-btn {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1e293b;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+}
+
+.toggle-grading-btn:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+/* Card */
+.grading-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.updated-card {
+  height: 340px;
+  justify-content: space-between;
+}
+
+.updated-header {
+  background: linear-gradient(to right, #f5f3ff, #fae8ff);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.card-title-black {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  font-family: "Inter", sans-serif;
+}
+
+.card-body {
+  padding: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+}
+
+/* Updated Gradient Button */
+.navigate-btn-soft {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: linear-gradient(
+    to right,
+    #6366f1,
+    #8b5cf6
+  ); /* Updated to match how-to-calculate */
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.navigate-btn-soft:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.nav-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+    margin-bottom: 4rem; /* Adjusted gap for smaller screens */
+  }
+
+  .card-title-black {
+    font-size: 1.3rem; /* Slightly bigger */
+  }
+
+  .card-description {
+    font-size: 1.05rem;
+  }
+
+  .updated-card {
+    height: auto;
+  }
+
+  .card-container {
+    max-width: 98%; /* Almost full width */
+  }
+
+  .card-body {
+    padding: 1.75rem; /* Extra padding */
+  }
+
+  .navigate-btn-soft {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .toggle-container {
+    margin-bottom: 4rem; /* Increased gap below toggle */
+  }
+}
